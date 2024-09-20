@@ -1,5 +1,0 @@
-package com.springprojects.virtualbookstore.controller;
-
-public class CartController {
-
-}

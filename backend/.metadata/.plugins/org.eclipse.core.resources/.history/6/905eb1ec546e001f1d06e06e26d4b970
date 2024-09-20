@@ -1,9 +1,0 @@
-package com.springprojects.virtualbookstore.repo;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.springprojects.virtualbookstore.model.Review;
-
-public interface ReviewRepo extends JpaRepository<Review, Long>{
-	
-}

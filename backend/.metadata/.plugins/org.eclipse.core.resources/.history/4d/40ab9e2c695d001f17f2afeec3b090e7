@@ -1,8 +1,0 @@
-package com.example.ecommerce_website.response;
-
-public class ApiResponse {
-	private String message;
-	private boolean status;
-	
-	
-}

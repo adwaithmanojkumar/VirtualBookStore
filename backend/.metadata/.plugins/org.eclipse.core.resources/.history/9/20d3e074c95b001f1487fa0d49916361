@@ -1,7 +1,0 @@
-package com.example.ecommerce_website.exception;
-
-public class UserException {
-	public UserException(String message) {
-		super(message);
-	}
-}

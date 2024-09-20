@@ -1,9 +1,0 @@
-package com.example.ecommerce_website.repo;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.example.ecommerce_website.model.Category;
-
-public interface CategoryRepo extends JpaRepository<Category, Long>{
-	public Category findByName(String name);
-}

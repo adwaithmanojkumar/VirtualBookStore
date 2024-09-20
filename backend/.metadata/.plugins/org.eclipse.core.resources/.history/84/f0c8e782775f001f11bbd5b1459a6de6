@@ -1,7 +1,0 @@
-package com.example.ecommerce_website.repo;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface OrderItemRepo extends JpaRepository<Order, Long>{
-
-}

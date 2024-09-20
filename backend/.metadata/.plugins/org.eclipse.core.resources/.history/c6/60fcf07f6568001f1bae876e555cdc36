@@ -1,8 +1,0 @@
-package com.springprojects.virtualbookstore.config;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public class JwtProvider {
-	
-}

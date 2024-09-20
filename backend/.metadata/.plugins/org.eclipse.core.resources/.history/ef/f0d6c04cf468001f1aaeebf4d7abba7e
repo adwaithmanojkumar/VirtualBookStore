@@ -1,8 +1,0 @@
-package com.springprojects.virtualbookstore.response;
-
-public class AuthResponse {
-	private String jwt;
-	private String message;
-	
-	
-}

@@ -1,7 +1,0 @@
-package com.springprojects.virtualbookstore.service;
-
-import com.springprojects.virtualbookstore.model.Rating;
-
-public interface RatingService {
-	public Rating createRating(Rating rating);
-}

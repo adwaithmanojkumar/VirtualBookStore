@@ -1,9 +1,0 @@
-package com.example.ecommerce_website.repo;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.example.ecommerce_website.model.CartItem;
-
-public interface CartItemRepo extends JpaRepository<CartItem, Long>{
-	public CartItem isCartItemExist(Long cartItemId);
-}

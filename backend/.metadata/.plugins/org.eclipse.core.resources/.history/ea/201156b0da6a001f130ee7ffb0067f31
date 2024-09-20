@@ -1,8 +1,0 @@
-package com.springprojects.virtualbookstore.request;
-
-public class AddItemRequest {
-	private Long bookId;
-	private int quantity;
-	private int price;
-
-}

@@ -1,5 +1,0 @@
-package com.springprojects.virtualbookstore.response;
-
-public class AuthResponse {
-
-}

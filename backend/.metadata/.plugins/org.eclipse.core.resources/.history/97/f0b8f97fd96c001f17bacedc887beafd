@@ -1,5 +1,0 @@
-package com.springprojects.virtualbookstore.config;
-
-public class JwtService {
-
-}

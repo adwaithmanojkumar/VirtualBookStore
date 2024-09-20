@@ -33,7 +33,7 @@
     </ul>
 </nav>
 <div class="container">
-	<h1>Welcome 2 Our bookStore</h1>
+	<h1>Welcome <span th:text="${name}"></span>, To Our bookStore</h1>
 	<h2><a th:href="book-list">Manage your books</a></h2>
 	<h2><a th:href="add-book">Add new book</a></h2>
 </div>

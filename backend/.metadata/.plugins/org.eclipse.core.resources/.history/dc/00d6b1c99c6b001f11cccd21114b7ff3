@@ -1,6 +1,0 @@
-package com.springprojects.virtualbookstore.config;
-
-public class JwtConstants {
-	public static final String SECRET_KEY = "5a12400ee69fba8a25b4a138ec226995aa5791bd2c8291ab587a27013aeb4f58";
-	public static final String JWT_HEADER = "Authorization";
-}
