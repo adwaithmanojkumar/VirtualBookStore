@@ -1,0 +1,20 @@
+package com.adwaith.springsecurity.resources;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TodosResources {
+	
+	@GetMapping("/todos")
+	public List<Todo> helloWorld() {
+		return List.of(new Todo("adwaith", "Learn AWS"),
+		new Todo("adwaith", "Learn AWS"));
+	}
+	
+	
+}
+
+record Todo(String username, String description) {}

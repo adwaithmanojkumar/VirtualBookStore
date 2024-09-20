@@ -1,0 +1,16 @@
+package com.example.ecommerce_website.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.ecommerce_website.exception.UserException;
+
+@RestController
+@RequestMapping("/auth")
+public class AuthController {
+	public ResponseEntity<AuthResponse> createUserHandler(@RequestBody User user) throws UserException {
+		Strung email = user.get
+	}
+}

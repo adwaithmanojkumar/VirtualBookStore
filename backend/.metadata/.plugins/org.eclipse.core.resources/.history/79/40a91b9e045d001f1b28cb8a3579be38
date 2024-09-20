@@ -1,0 +1,6 @@
+package com.example.ecommerce_website.request;
+
+public class AddItemRequest {
+	private Long productId;
+	
+}

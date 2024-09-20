@@ -1,0 +1,28 @@
+package Dsa;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MajorityElementII {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static List<Integer> majorityElement(int[] v) {
+		int count=1;
+		int n=v.length;
+		List<Integer> list = new ArrayList<>();
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(v[j]==v[i])
+					count++;
+				
+				if(count>n/3) {
+					
+				}
+			}
+		}
+		return null;
+	}
+}

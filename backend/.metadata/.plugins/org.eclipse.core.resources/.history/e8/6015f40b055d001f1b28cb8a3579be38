@@ -1,0 +1,31 @@
+package com.example.ecommerce_website.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ecommerce_website.exception.ProductException;
+import com.example.ecommerce_website.model.Cart;
+import com.example.ecommerce_website.model.User;
+import com.example.ecommerce_website.request.AddItemRequest;
+
+@Service
+public class CartServiceImplementation implements CartService {
+
+	@Override
+	public Cart createCart(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String addCartItem(Long userId, AddItemRequest req) throws ProductException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cart findUserCart(Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

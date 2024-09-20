@@ -1,0 +1,19 @@
+package com.springprojects.virtualbookstore.service;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.springprojects.virtualbookstore.repo.UserServiceRepo;
+
+@Service
+public class CustomUserServiceImplementation implements UserDetailsService {
+	private UserServiceRepo userServiceRepo;
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		return null;
+	}
+	
+}

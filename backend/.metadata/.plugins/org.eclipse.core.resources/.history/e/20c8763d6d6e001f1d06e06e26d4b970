@@ -1,0 +1,119 @@
+package com.springprojects.virtualbookstore.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.springprojects.virtualbookstore.exception.OrderException;
+import com.springprojects.virtualbookstore.model.Address;
+import com.springprojects.virtualbookstore.model.Cart;
+import com.springprojects.virtualbookstore.model.CartItem;
+import com.springprojects.virtualbookstore.model.Order;
+import com.springprojects.virtualbookstore.model.OrderItem;
+import com.springprojects.virtualbookstore.model.User;
+import com.springprojects.virtualbookstore.repo.AddressRepo;
+import com.springprojects.virtualbookstore.repo.OrderItemRepo;
+import com.springprojects.virtualbookstore.repo.OrderRepo;
+import com.springprojects.virtualbookstore.repo.UserServiceRepo;
+
+public class OrderServiceImplementation implements OrderService {
+	private OrderRepo orderRepo;
+	private CartService cartService;
+	private UserServiceRepo userServiceRepo;
+	private OrderItemService orderItemService;
+	private OrderItemRepo orderItemRepo;
+	private AddressRepo addressRepo;
+	
+	public OrderServiceImplementation(OrderRepo orderRepo, CartService cartService, UserServiceRepo userServiceRepo,
+			OrderItemService orderItemService, OrderItemRepo orderItemRepo, AddressRepo addressRepo) {
+		super();
+		this.orderRepo = orderRepo;
+		this.cartService = cartService;
+		this.userServiceRepo = userServiceRepo;
+		this.orderItemService = orderItemService;
+		this.orderItemRepo = orderItemRepo;
+		this.addressRepo = addressRepo;
+	}
+
+	@Override
+	public Order createOrder(User user, Address shippingAddress) {
+		shippingAddress.setUser(user);
+		Address address = addressRepo.save(shippingAddress);
+		user.getAddress().add(address);
+		userServiceRepo.save(user);
+		
+		Cart cart = cartService.findUserCart(user.getId());
+		List<OrderItem> orderItems = new ArrayList<>();
+		
+		for(CartItem cartItem:cart.getCartItems()) {
+			OrderItem orderItem = new OrderItem();
+			
+			orderItem.setPrice(cartItem.getPrice());
+			orderItem.setBook(cartItem.getBook());
+			orderItem.setDiscountedPrice(cartItem.getDiscountedPrice());
+			orderItem.setQuantity(cartItem.getQuantity());
+			orderItem.setUserId(cartItem.getUserId());
+			
+			OrderItem createdOrderItem = orderItemRepo.save(orderItem);
+			orderItems.add(createdOrderItem);
+		}
+		
+		
+		
+		return null;
+	}
+
+	@Override
+	public Order findOrderById(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Order> usersOrderHistory(Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Order placedOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Order confirmedOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Order shippedOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Order deliveredOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Order cancelledOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Order> getAllOrders() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

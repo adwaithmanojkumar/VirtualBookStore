@@ -1,0 +1,9 @@
+package com.example.ecommerce_website.service;
+
+import com.example.ecommerce_website.model.Order;
+
+public interface OrderService {
+	public Order findOrderById(Long orderId) throws OrderException; 
+	
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;virtualbookstore/src/main/resources/META-INF/resources/WEB-INF/jsp/NewFile.jsp&apos; to &apos;welcome.jsp&apos;" description="Rename resource &apos;NewFile.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/META-INF/resources/WEB-INF/jsp/NewFile.jsp" name="welcome.jsp" stamp="1713587640511" updateReferences="true"/>
+</session>

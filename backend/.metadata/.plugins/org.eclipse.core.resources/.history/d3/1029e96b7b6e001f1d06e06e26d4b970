@@ -1,0 +1,26 @@
+package com.springprojects.virtualbookstore.service;
+
+import java.util.List;
+
+import com.springprojects.virtualbookstore.exception.BookException;
+import com.springprojects.virtualbookstore.model.Rating;
+import com.springprojects.virtualbookstore.model.User;
+import com.springprojects.virtualbookstore.repo.RatingRepo;
+import com.springprojects.virtualbookstore.request.RatingRequest;
+
+public class RatingServiceImplementation implements RatingService {
+	private RatingRepo ratingRepo;
+	private UserServiceRepo userServiceRepo;
+
+	@Override
+	public Rating createRating(RatingRequest req, User user) throws BookException {
+		userServiceRepo.findb
+		return null;
+	}
+
+	@Override
+	public List<Rating> getBooksRating(Long bookId) {
+		return null;
+	}
+
+}

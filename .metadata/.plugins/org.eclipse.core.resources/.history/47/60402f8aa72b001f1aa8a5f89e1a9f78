@@ -1,0 +1,50 @@
+package com.springprojects.virtualbookstore.book;
+
+import java.util.List;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import jakarta.validation.Valid;
+
+@Controller
+public class BookControllerJpa {
+	private BookRepo bookRepo;
+
+	/**
+	 * @param bookRepo
+	 */
+	public BookControllerJpa(BookRepo bookRepo) {
+		this.bookRepo = bookRepo;
+	}
+	
+	@GetMapping(path = "/") 
+	public String welcomePage() {
+		return "welcome";
+	}
+	
+	@GetMapping(path = "book-list") 
+	public String findBooks(ModelMap model) { 
+		List<Book> booklist = bookRepo.findAll();
+		model.addAttribute("booklist",booklist);
+		System.out.println(booklist.toString());
+		return "bookList";
+	}
+	
+	@GetMapping(path = "add-book") 
+	public String showNewBookPage(@Valid Book book) { 
+		bookRepo.save(book);
+		model.addAttribute("booklist",booklist);
+		System.out.println(booklist.toString());
+		return "bookList";
+	}
+	
+	@PostMapping(path = "add-book") 
+	public String addBook(@Valid Book book) { 
+		bookRepo.save(book);
+		model.addAttribute("booklist",booklist);
+		System.out.println(booklist.toString());
+		return "bookList";
+	}
+}

@@ -1,0 +1,10 @@
+package com.adwaith.springsecurity.resources;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TodosResources {
+	
+	
+	
+}

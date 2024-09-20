@@ -1,0 +1,17 @@
+package com.adwaith.juint;
+
+public class calculationSquare {
+	
+	int[] arr= {1,2,3};
+	
+	public int calculationSquareOfNums(int[] arr) {
+		int sum=0;
+		
+		for(int num:arr) {
+			sum+=num;
+		}
+		
+		return sum;
+	}
+	
+}

@@ -1,0 +1,11 @@
+package com.adwaith.learnspringaop.data;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class DataService1 {
+	public int[] retrieveData(int[] arr) {
+		int[] arr = new int[] {10,20,30,40,50};
+		return arr;
+	}
+}

@@ -1,0 +1,27 @@
+package com.springprojects.virtualbookstore.service;
+
+import java.util.List;
+
+import com.springprojects.virtualbookstore.exception.BookException;
+import com.springprojects.virtualbookstore.model.Review;
+import com.springprojects.virtualbookstore.model.User;
+import com.springprojects.virtualbookstore.repo.ReviewRepo;
+import com.springprojects.virtualbookstore.request.ReviewRequest;
+
+public class ReviewServiceImplementation implements ReviewService {
+	private BookService bookService;
+	private ReviewRepo reviewRepo;
+
+	@Override
+	public Review createReview(ReviewRequest req, User user) throws BookException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> getBooksReview(Long bookId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

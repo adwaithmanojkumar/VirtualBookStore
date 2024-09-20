@@ -1,0 +1,29 @@
+package com.example.ecommerce_website.model;
+
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+public class OrderItem {
+	private Long id;
+	
+	@JsonIgnore
+	@ManyToOne
+	private Order order;
+	
+	private String size;
+	
+	private int price;
+	
+	private int quantity;
+	
+	private int discountedPrice;
+	
+	private Long userId;
+	
+	private LocalDateTime deliveryDate;
+}

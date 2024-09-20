@@ -1,0 +1,13 @@
+package com.springprojects.virtualbookstore.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springprojects.virtualbookstore.service.OrderService;
+
+@RestController
+public class OrderController {
+	private OrderService orderService;
+	private CartService cartService;
+	
+	
+}

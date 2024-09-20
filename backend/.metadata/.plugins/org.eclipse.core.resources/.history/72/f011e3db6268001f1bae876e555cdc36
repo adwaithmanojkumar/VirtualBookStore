@@ -1,0 +1,5 @@
+package com.springprojects.virtualbookstore.config;
+
+public class SpringSecurtiyConfig {
+
+}

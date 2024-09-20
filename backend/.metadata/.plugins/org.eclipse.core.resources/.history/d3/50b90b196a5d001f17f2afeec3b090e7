@@ -1,0 +1,17 @@
+package com.example.ecommerce_website.request;
+
+public class CreateProductRequest {
+	private String title;
+	
+	private String description;
+	
+	private int price;
+	
+	private int discountedPrice;
+	
+	private int discountPercent;
+	
+	private int quantity;
+	
+	
+}

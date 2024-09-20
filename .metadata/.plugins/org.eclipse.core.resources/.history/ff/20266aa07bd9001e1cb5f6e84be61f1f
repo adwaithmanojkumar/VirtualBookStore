@@ -1,0 +1,53 @@
+package Dsa;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class MajorityElementII {
+
+	public static void main(String[] args) {
+		int[] arr= {5,3,3,9,5,5};
+//		System.out.println(majorityElementBrute(arr).get(0)+" "+majorityElementBrute(arr).get(1));
+//		System.out.println(majorityElementBetter(arr).get(0));
+		for(int i=0;i<majorityElementBetter(arr).size();i++) {
+			System.out.println(majorityElementBetter(arr).get(i));
+		}
+	}
+	
+	//Brute-force
+	public static List<Integer> majorityElementBrute(int[] v) {
+		int n=v.length;
+		List<Integer> list = new ArrayList<>();
+		for(int i=0;i<n;i++) {
+			int count=1;
+			for(int j=i+1;j<n;j++) {
+				if(v[j]==v[i])
+					count++;
+				
+				if(count>n/3) {
+					list.add(v[i]);
+					break;
+				}
+			}
+			if(list.size()==2) break;
+		}
+		return list;
+	}
+	
+	//Better
+	public static List<Integer> majorityElementBetter(int[] v) {
+		int n=v.length;
+		List<Integer> list = new ArrayList<>();
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for(int i=0;i<n;i++) {
+			int value=map.getOrDefault(v[i], 0);
+			map.put(v[i], value+1);
+			
+			if(map.get(v[i])>n/3) {
+				list.add(v[i]);
+			}
+		}
+		return list;
+	}
+}

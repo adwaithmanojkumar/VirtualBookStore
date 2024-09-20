@@ -1,0 +1,28 @@
+package com.example.ecommerce_website.model;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+
+@Entity
+public class Cart {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@OneToOne(fetch = FetchType.LAZY)
+	
+	private User user;
+	
+	private Set<CartItem> cartItems = new HashSet<>();
+	
+	private double totalPrice;
+	
+	
+}

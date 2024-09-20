@@ -1,0 +1,7 @@
+package com.springprojects.virtualbookstore.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserServiceRepo extends JpaRepository<User, Long>{
+	
+}

@@ -1,0 +1,10 @@
+package com.springprojects.virtualbookstore.book;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Book {
+	private String id;
+	private String firstName;
+	private String lastName;
+}

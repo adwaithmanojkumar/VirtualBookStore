@@ -1,0 +1,32 @@
+package com.springprojects.virtualbookstore.request;
+
+public class ReviewRequest {
+	private Long bookId;
+	private double rating;
+	
+	public ReviewRequest() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public ReviewRequest(Long bookId, double rating) {
+		super();
+		this.bookId = bookId;
+		this.rating = rating;
+	}
+
+	public Long getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(Long bookId) {
+		this.bookId = bookId;
+	}
+
+	public double getRating() {
+		return rating;
+	}
+
+	public void setRating(double rating) {
+		this.rating = rating;
+	}
+}

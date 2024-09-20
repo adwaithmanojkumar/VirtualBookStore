@@ -1,0 +1,2 @@
+insert into Book(id,bookName,authorName,publishedDate)
+values(101,'the Psychology Of Money','Mark Manson',CURRENT_DATE());

@@ -1,0 +1,8 @@
+package com.springprojects.virtualbookstore.security;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SpringSecurityConfiguration {
+	
+}

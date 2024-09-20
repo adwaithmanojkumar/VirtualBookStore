@@ -1,0 +1,23 @@
+package ObserverPattern;
+
+public class WeatherStation implements Observable{
+
+	@Override
+	public void add(Observer observer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void remove(Observer observer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

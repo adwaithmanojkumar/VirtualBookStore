@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope"/>
+    <fullyQualifiedTypeName name="com.adwaith.company.TataConsultancy"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="com.adwaith.interfaces.Company"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="org.springframework.cglib.core.Customizer"/>
+    <fullyQualifiedTypeName name="org.springframework.security.config.http.SessionCreationPolicy"/>
+    <fullyQualifiedTypeName name="org.springframework.security.config.Customizer"/>
+    <fullyQualifiedTypeName name="ObserverPattern.Observable"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ObserverPattern.WeatherStation"/>
+    <fullyQualifiedTypeName name="ObserverPattern.Observer"/>
+    <fullyQualifiedTypeName name="ObserverPattern.IphoneObserver"/>
+</qualifiedTypeNameHistroy>

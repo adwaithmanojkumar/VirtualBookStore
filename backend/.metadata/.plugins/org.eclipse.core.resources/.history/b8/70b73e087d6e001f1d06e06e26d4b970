@@ -1,0 +1,10 @@
+package com.springprojects.virtualbookstore.request;
+
+public class ReviewRequest {
+	private Long bookId;
+	private String review;
+	
+	public ReviewRequest() {
+		// TODO Auto-generated constructor stub
+	}
+}

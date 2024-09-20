@@ -1,0 +1,8 @@
+package com.example.rest.webservices.restfulwebservices.todo;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TodoController {
+	private TodoService todoService;
+}

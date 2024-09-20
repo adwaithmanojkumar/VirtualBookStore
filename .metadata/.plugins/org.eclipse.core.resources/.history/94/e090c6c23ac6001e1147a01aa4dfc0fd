@@ -1,0 +1,35 @@
+package com.example.myfirstwebapp.todo;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class TodoController {
+	private TodoService todoService;
+
+	public TodoController(TodoService todoService) {
+		super();
+		this.todoService = todoService;
+	}
+	
+	@GetMapping("todo-list")
+	public String findTodos(ModelMap model) {
+		List<Todo> todolist = todoService.findByTask("tasks");
+		model.addAttribute("todolist", todolist);
+		return "todoList";
+	}
+	
+	@GetMapping("add-todo")
+	public String showNewTodoPage() {
+		return "todoList";
+	}
+	
+	@PostMapping("add-todo")
+	public String addNewTodoPage() {
+		return "toDo";
+	}
+}

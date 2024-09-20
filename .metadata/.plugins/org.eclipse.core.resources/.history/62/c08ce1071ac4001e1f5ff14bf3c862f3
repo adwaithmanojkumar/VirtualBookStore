@@ -1,0 +1,14 @@
+package com.example.myfirstwebapp.todo;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TodoService {
+	private static List<Todo> todos = new ArrayList<>();
+	
+	static {
+		todos.add(new Todo(1, "Check email", LocalDate.now().plusDays(1), false));
+		todos.add(new Todo(2, "Check email", LocalDate.now().plusDays(1), false));
+	}
+}

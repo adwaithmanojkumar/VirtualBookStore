@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TodoController.java&apos; to &apos;myfirstwebapp/src/main/java/com.example.myfirstwebapp.todo&apos;&#x0D;&#x0A;- Original project: &apos;myfirstwebapp&apos;&#x0D;&#x0A;- Destination element: &apos;myfirstwebapp/src/main/java/com.example.myfirstwebapp.todo&apos;&#x0D;&#x0A;- Original element: &apos;com.example.myfirstwebapp.todo.TodoController.java&apos;" description="Copy compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.myfirstwebapp.todo" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.myfirstwebapp.todo{TodoController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1707613196502" units="1" version="1.0"/>
+</session>

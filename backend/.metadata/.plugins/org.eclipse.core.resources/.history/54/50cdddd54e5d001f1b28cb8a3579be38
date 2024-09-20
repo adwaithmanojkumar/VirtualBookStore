@@ -1,0 +1,15 @@
+package com.example.ecommerce_website.service;
+
+import java.util.List;
+
+import com.example.ecommerce_website.exception.ProductException;
+import com.example.ecommerce_website.model.Product;
+import com.example.ecommerce_website.model.Review;
+import com.example.ecommerce_website.model.User;
+import com.example.ecommerce_website.request.ReviewRequest;
+
+public interface ReviewService {
+	public Review createReview(ReviewRequest req,User user) throws ProductException;
+	
+	public List<Review> getProductsReview(Long productId);
+}

@@ -1,0 +1,8 @@
+package com.adwaith.spring.mockitotest.business;
+
+import org.junit.jupiter.api.Test;
+
+public class SomeBusinessImplMock {
+	@Test
+	void findGreatest
+}

@@ -1,0 +1,35 @@
+package com.example.ecommerce_website.model;
+
+public class PaymentDetails {
+	private String paymentMethod;
+	
+	private String paymentStatus;
+	
+	private String paymentId;
+	
+	private String razorpayPaymentLinkId;
+	
+	private String razorpayPaymentLinkReferenceId;
+	
+	private String razorpayPaymentLinkStatus;
+	
+	private String razorpayPaymentId;
+	
+	public PaymentDetails() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public PaymentDetails(String paymentMethod, String paymentStatus, String paymentId, String razorpayPaymentLinkId,
+			String razorpayPaymentLinkReferenceId, String razorpayPaymentLinkStatus, String razorpayPaymentId) {
+		super();
+		this.paymentMethod = paymentMethod;
+		this.paymentStatus = paymentStatus;
+		this.paymentId = paymentId;
+		this.razorpayPaymentLinkId = razorpayPaymentLinkId;
+		this.razorpayPaymentLinkReferenceId = razorpayPaymentLinkReferenceId;
+		this.razorpayPaymentLinkStatus = razorpayPaymentLinkStatus;
+		this.razorpayPaymentId = razorpayPaymentId;
+	}
+	
+	
+}

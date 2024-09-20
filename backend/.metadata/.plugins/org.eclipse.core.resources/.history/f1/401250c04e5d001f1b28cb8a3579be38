@@ -1,0 +1,8 @@
+package com.example.ecommerce_website.request;
+
+public class ReviewRequest {
+	private Long productId;
+	private double rating;
+	
+	
+}

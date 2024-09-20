@@ -1,0 +1,40 @@
+package com.springprojects.virtualbookstore.service;
+
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+
+import com.springprojects.virtualbookstore.model.User;
+
+
+@Service
+public class CustomUserDetails implements UserDetails {
+	private UserService userService;
+	
+	public CustomUserDetails(UserService userService) {
+		this.userService = userService;
+	}
+	
+	public User getUser() {
+		userService.fin
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return List.of();
+	}
+
+	@Override
+	public String getPassword() {
+		return user.getPassword();
+	}
+
+	@Override
+	public String getUsername() {
+		return user.getEmail();
+	}
+	
+}

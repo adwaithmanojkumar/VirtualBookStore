@@ -1,0 +1,120 @@
+package com.example.ecommerce_website.service;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ecommerce_website.exception.OrderException;
+import com.example.ecommerce_website.model.Address;
+import com.example.ecommerce_website.model.Cart;
+import com.example.ecommerce_website.model.CartItem;
+import com.example.ecommerce_website.model.Order;
+import com.example.ecommerce_website.model.OrderItem;
+import com.example.ecommerce_website.model.User;
+import com.example.ecommerce_website.repo.AddressRepo;
+import com.example.ecommerce_website.repo.CartRepo;
+import com.example.ecommerce_website.repo.OrderItemRepo;
+import com.example.ecommerce_website.repo.OrderRepo;
+import com.example.ecommerce_website.repo.UserServiceRepo;
+import com.example.ecommerce_website.utils.OrderStatus;
+
+@Service
+public class OrderServiceImplementation implements OrderService {
+	private OrderRepo orderRepo;
+	private CartService cartService;
+	private UserServiceRepo userRepo;
+	private OrderItemService orderItemService;
+	private OrderItemRepo orderItemRepo;
+	private AddressRepo addressRepo;
+	
+	public OrderServiceImplementation(OrderRepo orderRepo, CartService cartService, UserServiceRepo userRepo,
+			OrderItemService orderItemService, OrderItemRepo orderItemRepo) {
+		super();
+		this.orderRepo = orderRepo;
+		this.cartService = cartService;
+		this.userRepo = userRepo;
+		this.orderItemService = orderItemService;
+		this.orderItemRepo = orderItemRepo;
+	}
+
+	@Override
+	public Order createOrder(User user, Address shippingAddress) {
+		shippingAddress.setUser(user);
+		Address address = addressRepo.save(shippingAddress);
+		user.getAddress().add(address);
+		userRepo.save(user);
+		
+		Cart cart = cartService.findUserCart(user.getId());
+		List<OrderItem> orderItems = new ArrayList<>();
+		
+		for(CartItem cartItem:cart.getCartItems()) {
+			OrderItem orderItem= new OrderItem();
+			
+			orderItem.setPrice(cartItem.getPrice());
+			orderItem.setProduct(cartItem.getProduct());
+			orderItem.setDiscountedPrice(cartItem.getDiscountedPrice());
+			orderItem.setDeliveryDate(LocalDateTime.now().plusDays(3L));
+			orderItem.setQuantity(cartItem.getQuantity());
+			orderItem.setSize(cartItem.getSize());
+		}
+		return null;
+	}
+
+	@Override
+	public Order findOrderById(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Order> usersOrderHistory(Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Order placedOrder(Long orderId) throws OrderException {
+		Order order=findOrderById(orderId);
+		order.setOrderStatus(OrderStatus.PLACED);
+		order.getPaymentDetails().setPaymentStatus("COMPLETED");
+		return orderRepo.save(order);
+	}
+
+	@Override
+	public Order confirmedOrder(Long orderId) throws OrderException {
+		Order order=findOrderById(orderId);
+		order.setOrderStatus(OrderStatus.CONFIRMED);
+		return orderRepo.save(order);
+	}
+
+	@Override
+	public Order shippedOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Order deliveredOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Order cancelledOrder(Long orderId) throws OrderException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Order> getAllOrders() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteOrder(Long orderId) throws OrderException {
+	}
+	
+}

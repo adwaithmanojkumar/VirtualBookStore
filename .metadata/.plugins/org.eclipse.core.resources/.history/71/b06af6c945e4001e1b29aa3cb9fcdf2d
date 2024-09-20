@@ -1,0 +1,24 @@
+package Dsa;
+
+public class SpiralMatrixII {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public int[][] get2DMatrix(int A) {
+		int rmin=0;
+		int rmax=A;
+		int cmin=0;
+		int cmax=A;
+		
+		if(count<A*A) {
+			for(int i=cmin;i<cmax;i++) {
+				rmin++;
+			}
+		}
+		
+		return null;
+	}
+
+}

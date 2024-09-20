@@ -1,0 +1,21 @@
+package com.springprojects.virtualbookstore.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Book {
+	private Long id;
+	
+	private String title;
+	
+	private String authorName;
+	
+	private int price;
+	
+	private List<Rating> ratings = new ArrayList<>();
+	
+	private List<Review> reviews = new ArrayList<>();
+}

@@ -1,0 +1,18 @@
+package com.springprojects.virtualbookstore.service;
+
+import com.springprojects.virtualbookstore.exception.UserException;
+import com.springprojects.virtualbookstore.model.User;
+
+public class UserServiceImplementation implements UserService {
+
+	@Override
+	public User findUserById(Long id) throws UserException {
+		return null;
+	}
+
+	@Override
+	public User findUserProfileByJwt(String jwt) throws UserException {
+		return null;
+	}
+	
+}

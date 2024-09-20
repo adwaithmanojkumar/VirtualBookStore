@@ -1,0 +1,13 @@
+package com.example.ecommerce_website.model;
+
+public class PaymentDetails {
+	private Paymentmethod paymentMethod;
+	
+	private PaymentStatus paymentStatus;
+	
+	private String paymentId;
+	
+	private String razorPayPaymentLinkId;
+	
+	
+}

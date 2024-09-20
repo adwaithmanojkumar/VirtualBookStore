@@ -1,0 +1,17 @@
+package com.example.rest.webservices.restfulwebservices.filtering;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FilterController {
+	@GetMapping("/filtering")
+	public SomeBean getSomeBean() {
+		return new SomeBean("value1","value2","value3");
+	}
+	
+	@GetMapping("/filtering-lists")
+	public List<SomeBean> getSomeBeanLists() {
+		return new SomeBean("value1","value2","value3");
+	}
+}

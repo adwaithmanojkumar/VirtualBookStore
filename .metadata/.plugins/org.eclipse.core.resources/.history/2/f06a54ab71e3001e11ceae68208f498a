@@ -1,0 +1,5 @@
+package com.adwaith.springsecurity.resources;
+
+public class CsrfTokenResource {
+
+}

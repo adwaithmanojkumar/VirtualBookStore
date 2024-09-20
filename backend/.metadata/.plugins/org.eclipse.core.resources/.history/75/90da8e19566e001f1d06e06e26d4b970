@@ -1,0 +1,9 @@
+package com.springprojects.virtualbookstore.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.springprojects.virtualbookstore.model.Review;
+
+public interface ReviewService extends JpaRepository<Review, Long>{
+
+}

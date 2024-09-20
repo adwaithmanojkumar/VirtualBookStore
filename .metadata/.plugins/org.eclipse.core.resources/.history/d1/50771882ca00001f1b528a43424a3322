@@ -1,0 +1,30 @@
+<%@include file="common/header.jspf"%>
+<%@include file="common/navigation.jspf"%>
+<div>
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Book ID</th>
+					<th>Book Name</th>
+					<th>Author Name</th>
+					<th>Published Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="booklist" var="book">
+					<tr>
+						<td>${book.BookName}</td>
+						<td>${todo.date}</td>
+						<td>${todo.taskStatus}</td>
+						<td><a href="update-todo?id=${todo.id}"
+							class="btn btn-success">UPDATE</a></td>
+						<td><a href="delete-todo?id=${todo.id}"
+							class="btn btn-warning">DELETE</a></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+</div>
+<%@include file="common/footer.jspf"%>

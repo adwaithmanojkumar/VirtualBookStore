@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\CSE\LLD Projects"/>
+			<item value="D:\CSE\full stack java\SpringProjects\Virtualbookstore"/>
+			<item value="D:\CSE\full stack java\SpringProjects\virtualbookstore"/>
+			<item value="C:\Users\sys1\git\VirtualBookStore"/>
+			<item value="D:\adwaith\java projects\master-spring-and-spring-boot-main (1)\master-spring-and-spring-boot-main\91-aws\01-hello-world-java"/>
+			<item value="D:\adwaith\java projects\learnspringsecurity"/>
+			<item value="D:\adwaith\java projects\mockito"/>
+			<item value="D:\adwaith\java projects\springnew"/>
+			<item value="C:\Users\sys1\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\SpringMVC"/>
+			<item value="D:\adwaith\java projects\springmvcboot"/>
+			<item value="D:\adwaith\java projects\SpringJdbc"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/myfirstwebapp/src/main/java/com/example/myfirstwebapp/todo/Todo.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="ShowDerived" value="false"/>
+		<item key="FilterByLocation" value="false"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="1030"/>
+			<item key="DIALOG_WIDTH" value="1920"/>
+			<item key="DIALOG_X_ORIGIN" value="9"/>
+			<item key="DIALOG_Y_ORIGIN" value="9"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="611"/>
+		<item key="DIALOG_Y_ORIGIN" value="274"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

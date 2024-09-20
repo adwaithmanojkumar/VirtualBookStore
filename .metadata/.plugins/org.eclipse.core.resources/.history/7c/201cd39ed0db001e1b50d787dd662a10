@@ -1,0 +1,16 @@
+package com.adwaith.juint;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MathTest {
+
+	@Test
+	void test() {
+		int[] arr= {1,2,3};
+		
+		int result=calculationSquare(arr);
+	}
+
+}

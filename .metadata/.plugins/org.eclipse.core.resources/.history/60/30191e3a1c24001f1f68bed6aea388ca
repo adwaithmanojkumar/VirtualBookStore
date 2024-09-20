@@ -1,0 +1,43 @@
+package com.springprojects.virtualbookstore.book;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+@Controller
+@SessionAttributes("name")
+public class BookControllerJpa {
+	private BookRepo bookRepo;
+
+	public BookControllerJpa(BookRepo bookRepo) {
+		super();
+		this.bookRepo = bookRepo;
+	}
+	
+	@GetMapping(path = "book-list")
+	public String getAllBooks(ModelMap model) {
+		List<Book> booklist = bookRepo.findAll();
+		System.out.println(booklist.toString());
+		model.addAttribute("booklist", booklist);
+		return "bookList";
+	}
+	
+	@DeleteMapping(path = "delete-todo")
+	public String deleteBook(ModelMap model) {
+		Book book = bookRepo.getReferenceById(id);
+		bookRepo.delete(book);
+		return "bookList";
+	}
+	
+	@GetMapping(path = "add-book")
+	public String addNewBook(ModelMap model) {
+		List<Book> booklist = bookRepo.findAll();
+		System.out.println(booklist.toString());
+		model.addAttribute("booklist", booklist);
+		return "addBook";
+	}
+}

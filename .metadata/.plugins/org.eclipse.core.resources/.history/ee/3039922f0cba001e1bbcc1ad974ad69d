@@ -1,0 +1,49 @@
+package com.adwaith.SpringJdbc.repo;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+import com.adwaith.SpringJdbc.model.College;
+
+@Repository
+public class CollegeRepo {
+	private JdbcTemplate template;
+	
+	public JdbcTemplate getTemplate() {
+		return template;
+	}
+
+	@Autowired
+	public void setTemplate(JdbcTemplate template) {
+		this.template = template;
+	}
+
+	public void save(College college) {
+		String sql = "insert into college(students,name,place) values(?,?,?)";
+		
+		int rows = template.update(sql, college.getStudents(),college.getName(),college.getPlace());
+		System.out.println(rows+" row/s affected");
+	}
+
+	public List<College> fetchAll() {
+		String sql = "select * from College";
+
+		RowMapper<College> mapper = (rs, row) -> {
+			College college = new College();
+
+			college.setStudents(rs.getInt("students"));
+			college.setName(rs.getString("name"));
+			college.setPlace(rs.getString("place"));
+			return college;
+		};
+		List<College> colleges = template.query(sql, mapper);
+
+		return colleges;
+	}
+}

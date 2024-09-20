@@ -1,0 +1,9 @@
+package com.example.ecommerce_website.service;
+
+import com.example.ecommerce_website.model.Product;
+
+public interface ProductService {
+	public Product createProduct(CreateProductRequest req);
+	
+	
+}

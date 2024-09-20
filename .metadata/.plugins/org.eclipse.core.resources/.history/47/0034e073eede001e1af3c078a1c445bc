@@ -1,0 +1,23 @@
+package com.adwaith.spring.mockitotest.business;
+
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+
+class SomeBusinessImplMockTest {
+	@Mock
+	private DataService dataServiceMock;
+	
+	@InjectMocks
+	private SomeBusinessImpl someBusinessImpl;
+
+	@Test
+	void findGreatestFrom_AllBasicScenarios() {
+		when(someBusinessImpl.findTheGreatestFromAllData()).thenReturn(new int[] {25,15,5);
+		
+		}
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.springprojects.virtualbookstore.book;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
+@gene
+public class Book {
+	@Id
+	@GeneratedValue
+	private int id;
+	private String bookName;
+	private LocalDate publishedDate;
+}

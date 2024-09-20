@@ -1,0 +1,18 @@
+1707116080216	Delete element
+1707124863561	Copy file
+1707132465362	Rename compilation unit 'TododService.java'
+1707179885300	Copy file
+1707290934582	Delete element
+1707365806723	Copy file
+1707461522916	Copy file
+1707488339406	Delete element
+1707538839696	Delete element
+1707541700655	Delete element
+1707541766330	Delete element
+1707541859152	Rename compilation unit 'LoginController.java'
+1707548503752	Extract local variable 'username'
+1707548512504	Extract local variable 'password'
+1707548544132	Extract method 'createNewUser'
+1707548604205	Inline local variable 'username'
+1707548611006	Inline local variable 'password'
+1707573973212	Delete element

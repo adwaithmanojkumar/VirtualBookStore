@@ -1,0 +1,53 @@
+package com.springprojects.virtualbookstore.service;
+
+import org.springframework.stereotype.Service;
+
+import com.springprojects.virtualbookstore.exception.CartItemException;
+import com.springprojects.virtualbookstore.exception.UserException;
+import com.springprojects.virtualbookstore.model.Book;
+import com.springprojects.virtualbookstore.model.Cart;
+import com.springprojects.virtualbookstore.model.CartItem;
+import com.springprojects.virtualbookstore.repo.CartItemRepo;
+
+@Service
+public class CartItemServiceImplementation implements CartItemService {
+	private CartItemRepo cartItemRepo;
+	private UserService userService;
+	
+	public CartItemServiceImplementation(CartItemRepo cartItemRepo, UserService userService) {
+		super();
+		this.cartItemRepo = cartItemRepo;
+		this.userService = userService;
+	}
+
+	@Override
+	public CartItem createCartItem(CartItem cartItem) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CartItem updateCartItem(Long userId, Long cartItemId, CartItem cartItem)
+			throws CartItemException, UserException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeCartItem(Long userId, Long cartItemId) throws CartItemException, UserException {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public CartItem findCartItemById(Long cartItemId) throws CartItemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CartItem isCartItemExist(Book book, Cart cart, Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

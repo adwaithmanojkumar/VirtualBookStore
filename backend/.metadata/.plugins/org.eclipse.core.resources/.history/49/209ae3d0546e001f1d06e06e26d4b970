@@ -1,0 +1,5 @@
+package com.springprojects.virtualbookstore.repo;
+
+public interface RatingRepo {
+
+}

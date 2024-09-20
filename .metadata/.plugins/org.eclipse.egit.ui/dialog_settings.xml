@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="ResetTargetSelectionDialog.resetType" value="MIXED"/>
+	<list key="CommitDialog.authorValues">
+		<item value="adwaith &lt;adwaithmanojkumar@gmail.com&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="adwaith &lt;adwaithmanojkumar@gmail.com&gt;"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="git@github.com:adwaithmanojkumar/VirtualBookStore.git"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="529,471"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\sys1\git\springsecurityrepository\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\sys1\git\VirtualBookStore\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\sys1\git\repository\.git">
+			<item value="empty"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="599"/>
+		<item key="DIALOG_Y_ORIGIN" value="204"/>
+		<item key="DIALOG_WIDTH" value="740"/>
+		<item key="DIALOG_HEIGHT" value="481"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.fetch.FetchResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="192"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="498"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.ResetTargetSelectionDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="9"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="849"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.RebaseTargetSelectionDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="128"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="594"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

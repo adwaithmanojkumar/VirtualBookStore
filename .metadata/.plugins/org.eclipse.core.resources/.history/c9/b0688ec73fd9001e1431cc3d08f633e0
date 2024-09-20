@@ -1,0 +1,24 @@
+package Dsa;
+
+public class MajorityElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static int majorityElement(int []v) {
+        // Write your code here
+        int n=v.length;
+        Hashtable<Integer,Integer> table = new Hashtable<>();
+        for(int i=0;i<n;i++) {
+            if(table!=null && !table.isEmpty() && table.contains(v[i]))
+                table.put(v[i], table.get(v[i])++);
+            else
+                table.put(v[i],1);
+
+            if(table.get(v[i])>n/2)
+                return v[i];
+        }
+    }
+}

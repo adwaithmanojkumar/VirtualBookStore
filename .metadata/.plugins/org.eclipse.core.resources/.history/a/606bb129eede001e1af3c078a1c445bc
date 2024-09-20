@@ -1,0 +1,14 @@
+package com.adwaith.spring.mockitotest.business;
+
+import org.junit.jupiter.api.Test;
+
+class SomeBusinessImplMockTest {
+	@Mock
+	
+
+	@Test
+	void findGreatestFrom_AllBasicScenarios() {
+		
+	}
+
+}

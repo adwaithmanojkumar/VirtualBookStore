@@ -1,0 +1,29 @@
+package com.springprojects.virtualbookstore.service;
+
+import com.springprojects.virtualbookstore.config.JwtProvider;
+import com.springprojects.virtualbookstore.exception.UserException;
+import com.springprojects.virtualbookstore.model.User;
+import com.springprojects.virtualbookstore.repo.UserServiceRepo;
+
+public class UserServiceImplementation implements UserService {
+	private UserServiceRepo userServiceRepo;
+	private JwtProvider jwtProvider;
+	
+	public UserServiceImplementation(UserServiceRepo userServiceRepo, JwtProvider jwtProvider) {
+		super();
+		this.userServiceRepo = userServiceRepo;
+		this.jwtProvider = jwtProvider;
+	}
+
+	@Override
+	public User findUserById(Long id) throws UserException {
+		
+		return null;
+	}
+
+	@Override
+	public User findUserProfileByJwt(String jwt) throws UserException {
+		return null;
+	}
+	
+}

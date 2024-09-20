@@ -1,0 +1,38 @@
+package com.example.myfirstwebapp.todo;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class TodoService {
+	private static List<Todo> todos = new ArrayList<>();
+	
+	private static int todoCount = 0;
+	
+	static {
+		todos.add(new Todo(++todoCount, "Check email", LocalDate.now().plusDays(1), false));
+		todos.add(new Todo(++todoCount, "Buy Fruits", LocalDate.now(), true));
+		todos.add(new Todo(++todoCount, "Learn Spring", LocalDate.now().plusMonths(2), true));
+	}
+	
+	public List<Todo> findByTask(String taskName) {
+		return todos;
+	}
+
+	public void addTask(String taskName, LocalDate targetDate, boolean status) {
+		todos.add(new Todo(++todoCount, taskName, targetDate, status));
+	}
+	
+	public void deleteTask(int id) {
+		Predicate<? super Todo> predicate = Todo -> Todo.getId() == id;
+		todos.removeIf(predicate);
+	}
+	
+	public void updateTask(int id, String taskName, LocalDate targetDate, boolean status) {
+		todos.add(new Todo(id, taskName, targetDate, status));
+	}
+}

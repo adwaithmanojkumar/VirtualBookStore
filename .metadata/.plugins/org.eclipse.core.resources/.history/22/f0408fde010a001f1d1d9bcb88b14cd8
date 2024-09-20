@@ -1,0 +1,13 @@
+package CP;
+
+public class NewYearClass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		
+	}
+
+}

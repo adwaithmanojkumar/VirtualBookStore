@@ -1,0 +1,17 @@
+package com.adwaith.company;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.adwaith.interfaces.Company;
+
+public class TataConsultancy implements Company {
+	@Autowired
+	@Qualifier("employees")
+	Employee employee;
+
+	@Override
+	public void service() {
+		System.out.println("Product Based Company "+employee.numbers);
+	}
+}

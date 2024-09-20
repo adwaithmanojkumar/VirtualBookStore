@@ -1,0 +1,15 @@
+<%@include file="common/header.jspf"%>
+<%@include file="common/navigation.jspf"%>
+<div>
+	<div class="container">
+		<table class="table">
+			<thead>
+				<th>Book ID</th>
+				<th>Book Name</th>
+				<th>Author Name</th>
+				<th>Published Date</th>
+			</thead>
+		</table>
+	</div>
+</div>
+<%@include file="common/footer.jspf"%>

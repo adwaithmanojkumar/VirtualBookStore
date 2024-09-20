@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;common&apos;&#x0D;&#x0A;- Original project: &apos;myfirstwebapp&apos;&#x0D;&#x0A;- Destination element: &apos;common&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     navigation.jspf&#x0D;&#x0A;     footer.jspf&#x0D;&#x0A;     header.jspf" description="Copy files" element1="src/main/resources/META-INF/resources/WEB-INF/jsp/common/navigation.jspf" element2="src/main/resources/META-INF/resources/WEB-INF/jsp/common/footer.jspf" element3="src/main/resources/META-INF/resources/WEB-INF/jsp/common/header.jspf" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1717868353680" target="/Virtualbookstore/src/main/resources/META-INF/resources/WEB-INF/jsp/common" units="0" version="1.0"/>
+</session>

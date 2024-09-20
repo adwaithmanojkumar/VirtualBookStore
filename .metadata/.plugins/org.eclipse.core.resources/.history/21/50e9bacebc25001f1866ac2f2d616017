@@ -1,0 +1,15 @@
+package com.springprojects.virtualbookstore.book;
+
+public class BookControllerJpa {
+	private BookRepo bookRepo;
+
+	/**
+	 * @param bookRepo
+	 */
+	public BookControllerJpa(BookRepo bookRepo) {
+		super();
+		this.bookRepo = bookRepo;
+	}
+	
+	
+}

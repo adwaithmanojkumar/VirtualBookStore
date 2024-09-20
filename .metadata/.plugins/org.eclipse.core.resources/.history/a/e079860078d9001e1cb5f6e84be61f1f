@@ -1,0 +1,14 @@
+package Dsa;
+
+import java.util.List;
+
+public class MajorityElementII {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static List<Integer> majorityElement(int[] v) {
+		
+	}
+}

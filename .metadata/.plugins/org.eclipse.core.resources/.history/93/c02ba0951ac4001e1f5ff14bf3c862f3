@@ -1,0 +1,14 @@
+package com.example.myfirstwebapp.todo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class TodoController {
+	private TodoService todoService;
+	
+	@GetMapping("todo-list")
+	public String findTodos() {
+		return "todoList";
+	}
+}

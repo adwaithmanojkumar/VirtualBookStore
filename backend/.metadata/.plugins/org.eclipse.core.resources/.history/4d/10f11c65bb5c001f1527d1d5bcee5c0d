@@ -1,0 +1,28 @@
+package com.example.ecommerce_website.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+public class CartItem {
+	private Long id;
+	
+	@JsonIgnore
+	@ManyToOne
+	private Cart cart;
+	
+	@ManyToOne
+	private Product product;
+	
+	private String size;
+	
+	private int quantity;
+	
+	private int price;
+	
+	private int discountedPrice;
+	
+	private Long userId;
+}

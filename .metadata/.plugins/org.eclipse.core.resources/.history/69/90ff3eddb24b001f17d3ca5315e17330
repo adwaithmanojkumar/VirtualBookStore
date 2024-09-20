@@ -1,0 +1,26 @@
+package ObserverPattern;
+
+import java.util.List;
+
+public class WeatherStation implements Observable{
+	List<String> observerList = new ArrayList<>();
+	private String weather;
+
+	@Override
+	public void add(Observer observer) {
+		
+	}
+
+	@Override
+	public void remove(Observer observer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.springprojects.virtualbookstore.repo;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface BookRepo {
+
+}

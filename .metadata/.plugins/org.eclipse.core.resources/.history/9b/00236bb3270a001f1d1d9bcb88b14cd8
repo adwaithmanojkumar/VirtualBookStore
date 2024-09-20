@@ -1,0 +1,9 @@
+package CP;
+
+public class NewYearClass {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

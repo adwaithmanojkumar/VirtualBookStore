@@ -1,0 +1,67 @@
+package Dsa;
+
+public class SpiralMatrixII {
+
+	public static void main(String[] args) {
+		int A=2;
+		int[][] arr = new int[A][A];
+		arr=get2DMatrix(A);
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.println(arr[i][j]);
+			}
+		}
+	}
+
+	public static int[][] get2DMatrix(int A) {
+		int rmin = 0;
+		int rmax = A;
+		int cmin = 0;
+		int cmax = A;
+		
+		int count = 0;
+		
+		int[][] arr = new int[A][A];
+
+		if (A == 1) {
+			arr[0][0] = 1;
+			return arr;
+		}
+
+		while (rmin<rmax && cmin<cmax) {
+			for (int i = cmin; i < cmax; i++) {
+				if (count < A * A) {
+					arr[rmin][i] = ++count;
+					System.out.println(arr[rmin][i]);
+				}
+			}
+			rmin++;
+
+			for (int i = rmin; i < rmax; i++) {
+				if (count < A * A) {
+					arr[i][cmax-1] = ++count;
+					System.out.println(arr[i][cmax]);
+				}
+			}
+			cmax--;
+
+			for (int i = cmax; i > cmin; i++) {
+				if (count < A * A) {
+					arr[rmax-1][i] = ++count;
+					System.out.println(arr[rmax][i]);
+				}
+			}
+			rmax--;
+
+			for (int i = rmax; i > rmin; i++) {
+				if (count < A * A) {
+					arr[i][cmin] = ++count;
+					System.out.println(arr[i][cmin]);
+				}
+			}
+			cmin++;
+		}
+
+		return arr;
+	}
+}

@@ -1,0 +1,5 @@
+package com.springprojects.virtualbookstore.model;
+
+public class Order {
+
+}

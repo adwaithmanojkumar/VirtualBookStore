@@ -1,0 +1,7 @@
+<%@include file="common/header.jspf"%>
+<%@ include file="common/navigation.jspf"%>
+<div class="container">
+	<h1>Welcome 2 Our bookStore</h1>
+	<h2><a href="todo-list">Manage your books</a></h2>
+</div>
+<%@include file="common/footer.jspf"%>

@@ -1,0 +1,10 @@
+package ObserverPattern;
+
+public class IphoneObserver implements Observer{
+
+	@Override
+	public void update(String weather) {
+		
+	}
+
+}

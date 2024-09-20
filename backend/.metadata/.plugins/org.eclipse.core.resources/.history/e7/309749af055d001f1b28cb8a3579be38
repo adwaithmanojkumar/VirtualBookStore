@@ -1,0 +1,6 @@
+package com.example.ecommerce_website.service;
+
+
+public interface CartItemService {
+
+}

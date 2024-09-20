@@ -1,0 +1,43 @@
+package com.example.ecommerce_website.service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ecommerce_website.exception.ProductException;
+import com.example.ecommerce_website.model.Product;
+import com.example.ecommerce_website.model.Rating;
+import com.example.ecommerce_website.model.User;
+import com.example.ecommerce_website.repo.RatingRepo;
+import com.example.ecommerce_website.request.RatingRequest;
+
+@Service
+public class RatingServiceimplementation implements RatingService{
+	private RatingRepo ratingRepo;
+	private ProductService productService;
+	
+	public RatingServiceimplementation(RatingRepo ratingRepo, ProductService productService) {
+		super();
+		this.ratingRepo = ratingRepo;
+		this.productService = productService;
+	}
+
+	@Override
+	public Rating createRating(RatingRequest req, User user) throws ProductException {
+		Product product = productService.findProductById(req.getProductId());
+		
+		Rating rating = new Rating();
+		rating.setProduct(product);
+		rating.setUser(user);
+		rating.setRating(req.getRating());
+		rating.setCreatedAt(LocalDateTime.now());
+		return ratingRepo.save(rating);
+	}
+
+	@Override
+	public List<Rating> getProductsRating(Long productId) {
+		return null;
+	}
+	
+}

@@ -1,0 +1,4 @@
+INSERT INTO book(id,book_Name,author_Name,published_Date)
+VALUES (101,'Playing It In My Way','Sachin Tendulkar','2014-04-12');
+INSERT INTO book(id,author_Name,book_Name,published_Date)
+VALUES (102,'Walter IsaacSon','Steve Jobs','2011-10-24');

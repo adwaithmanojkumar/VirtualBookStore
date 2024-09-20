@@ -1,0 +1,23 @@
+package com.example.rest.webservices.restfulwebservices.todo;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.myfirstwebapp.todo.Todo;
+
+@RestController
+public class TodoController {
+	private TodoService todoService;
+
+	public TodoController(TodoService todoService) {
+		super();
+		this.todoService = todoService;
+	}
+	
+	@GetMapping()
+	public void retrieveTodos() {
+		return todoService.findByUsername(username);
+	}
+}

@@ -1,0 +1,21 @@
+INDEX VERSION 1.134
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\276775798.index
+\Virtualbookstore\src\main\resources
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3076917706.index
+\myfirstwebapp\src\main\java
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\200475859.index
+\virtualbookstore\src\main\java
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2156563519.index
+\Virtualbookstore\src\main\java
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\353996774.index
+\SpringTutorials\src\main\java
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\329792053.index
+\Virtualbookstore\src\main\java
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\176938188.index
+\SpringMVC\src\main\java
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\11361072.index
+\SpringJdbc\src\main\java
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\868916620.index
+\VirtualBookStore\virtualbookstore\src\main\java
+D:\CSE\full stack java\SpringProjects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\416380735.index
+\springmvcboot\src\main\java

@@ -1,0 +1,10 @@
+package com.example.ecommerce_website.service;
+
+import com.example.ecommerce_website.model.User;
+
+public class UserService {
+	public User findUserById(Long id) throws UserException;
+	
+	public User findUserProfileByJwt(String jwt) throws UserException;
+	
+}

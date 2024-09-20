@@ -1,0 +1,22 @@
+package com.example.ecommerce_website.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ecommerce_website.model.OrderItem;
+import com.example.ecommerce_website.repo.OrderItemRepo;
+
+@Service
+public class OrderItemServiceImplementation implements OrderItemService {
+	private OrderItemRepo orderItemRepo;
+	
+	public OrderItemServiceImplementation(OrderItemRepo orderItemRepo) {
+		super();
+		this.orderItemRepo = orderItemRepo;
+	}
+
+	@Override
+	public OrderItem createOrderItem(OrderItem orderItem) {
+		return null;
+	}
+	
+}

@@ -1,0 +1,14 @@
+package com.example.ecommerce_website.service;
+
+import com.example.ecommerce_website.exception.ProductException;
+import com.example.ecommerce_website.model.Cart;
+import com.example.ecommerce_website.model.User;
+import com.example.ecommerce_website.request.AddItemRequest;
+
+public interface CartItemService {
+	public Cart createCart(User user);
+	
+	public String addCartItem(Long userId,AddItemRequest req) throws ProductException;
+	
+	public Cart findUserCart(Long userId);
+}

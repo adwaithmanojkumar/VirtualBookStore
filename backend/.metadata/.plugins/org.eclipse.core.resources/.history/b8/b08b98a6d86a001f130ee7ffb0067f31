@@ -1,0 +1,7 @@
+package com.springprojects.virtualbookstore.service;
+
+import com.springprojects.virtualbookstore.model.Book;
+
+public interface BookService {
+	public Book createProduct(CreateBookRequest req);
+}

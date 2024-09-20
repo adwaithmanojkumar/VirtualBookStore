@@ -1,0 +1,8 @@
+package com.example.ecommerce_website.request;
+
+import com.example.ecommerce_website.model.Rating;
+
+public class RatingRequest {
+	private Long productId;
+	private Rating rating;
+}

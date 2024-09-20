@@ -1,0 +1,37 @@
+package com.springprojects.virtualbookstore.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+
+@Entity
+public class Book {
+	private Long id;
+	
+	private String title;
+	
+	private String authorName;
+	
+	private int price;
+	
+	@Column(name = "discounted_price")
+	private int discountedPrice;
+	
+	@Column(name = "discount_percent")
+	private int discountPercent;
+	
+	private String description;
+	
+	@OneToMany(mappedBy = "book",cascade = CascadeType.ALL,orphanRemoval = true)
+	private List<Rating> ratings = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "book",cascade = CascadeType.ALL,orphanRemoval = true)
+	private List<Review> reviews = new ArrayList<>();
+	
+	@Column(name = "image_url")
+	private String imageUrl;
+}

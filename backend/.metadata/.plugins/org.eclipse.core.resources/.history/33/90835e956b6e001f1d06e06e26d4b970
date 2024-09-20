@@ -1,0 +1,16 @@
+package com.springprojects.virtualbookstore.service;
+
+import com.springprojects.virtualbookstore.model.OrderItem;
+import com.springprojects.virtualbookstore.repo.OrderItemRepo;
+
+public class OrderItemServiceImplementation implements OrderItemService {
+	private OrderItemRepo orderItemRepo;
+	
+
+	@Override
+	public OrderItem createOrderItem(OrderItem orderItem) {
+		
+		return null;
+	}
+
+}

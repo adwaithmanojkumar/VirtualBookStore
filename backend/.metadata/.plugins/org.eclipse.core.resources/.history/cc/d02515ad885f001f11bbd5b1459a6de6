@@ -1,0 +1,5 @@
+package com.example.ecommerce_website.repo;
+
+public interface AddressRepo {
+
+}

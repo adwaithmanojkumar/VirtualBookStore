@@ -1,0 +1,48 @@
+package com.example.ecommerce_website.controller;
+
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.ecommerce_website.exception.ProductException;
+import com.example.ecommerce_website.exception.UserException;
+import com.example.ecommerce_website.model.Rating;
+import com.example.ecommerce_website.model.User;
+import com.example.ecommerce_website.request.RatingRequest;
+import com.example.ecommerce_website.service.RatingService;
+import com.example.ecommerce_website.service.ReviewService;
+import com.example.ecommerce_website.service.UserService;
+
+@RestController
+@RequestMapping("/api/reviews")
+public class ReviewController {
+	private UserService userService;
+	private ReviewService reviewService;
+
+	public ReviewController(UserService userService, ReviewService reviewService) {
+		super();
+		this.userService = userService;
+		this.reviewService = reviewService;
+	}
+
+	@PostMapping("/create")
+	public ResponseEntity<Rating> createRating(@RequestBody RatingRequest req,@RequestHeader("Authorization") String jwt) throws ProductException, UserException {
+		User user = userService.findUserProfileByJwt(jwt);
+		Rating rating = reviewService.createRating(req, user);
+		return new ResponseEntity<Rating>(rating, HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/product/{productId}")
+	public ResponseEntity<List<Rating>> getProductRating(@PathVariable Long productId) {
+		List<Rating> ratings = reviewService.getProductsRating(productId);
+		return new ResponseEntity<List<Rating>>(ratings, HttpStatus.CREATED);
+	}
+}

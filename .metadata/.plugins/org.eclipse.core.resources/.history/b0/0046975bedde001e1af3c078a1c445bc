@@ -1,0 +1,25 @@
+package com.adwaith.spring.mockitotest.business;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class SomeBusinessImplStubTest {
+
+	@Test
+	void findGreatestFrom_allBasicScenarios() {
+		DataService dataServiceStub = new DataServiceStub1();
+		SomeBusinessImpl someBusinessImpl = new SomeBusinessImpl(dataServiceStub);
+		int value = someBusinessImpl.findTheGreatestFromAllData();
+	}
+
+}
+
+class DataServiceStub1 implements DataService {
+
+	@Override
+	public int[] retrieveAllData() {
+		return new int[] {25,15,5};
+	}
+	
+}

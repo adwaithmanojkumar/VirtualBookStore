@@ -1,0 +1,12 @@
+package ObserverPattern;
+
+public class ObserverMain {
+
+	public static void main(String[] args) {
+		WeatherStation station = new WeatherStation();
+		
+		Observer iPhoneObserver = new IphoneObserver();
+		
+	}
+
+}

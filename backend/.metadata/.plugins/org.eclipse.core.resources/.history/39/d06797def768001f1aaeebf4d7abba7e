@@ -1,0 +1,5 @@
+package com.springprojects.virtualbookstore.controller;
+
+public class UserController {
+
+}

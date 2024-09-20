@@ -1,0 +1,38 @@
+package com.example.ecommerce_website.service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ecommerce_website.exception.ProductException;
+import com.example.ecommerce_website.model.Product;
+import com.example.ecommerce_website.model.Review;
+import com.example.ecommerce_website.model.User;
+import com.example.ecommerce_website.repo.ReviewRepo;
+import com.example.ecommerce_website.request.ReviewRequest;
+
+@Service
+public class ReviewServiceImplementation implements ReviewService{
+	private ReviewRepo reviewRepo;
+	private ProductService productService;
+
+	@Override
+	public Review createReview(ReviewRequest req, User user) throws ProductException {
+		Product product = productService.findProductById(req.getProductId());
+		
+		Review review = new Review();
+		review.setProduct(product);
+		review.setUser(user);
+		review.setReview(req.getReview());
+		review.setCreatedAt(LocalDateTime.now());
+		return reviewRepo.save(review);
+	}
+
+	@Override
+	public List<Review> getProductsReview(Long productId) {
+		
+		return null;
+	}
+
+}

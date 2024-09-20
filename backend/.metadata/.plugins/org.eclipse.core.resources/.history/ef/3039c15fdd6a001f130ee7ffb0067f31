@@ -1,0 +1,66 @@
+package com.springprojects.virtualbookstore.service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.springprojects.virtualbookstore.exception.BookException;
+import com.springprojects.virtualbookstore.model.Book;
+import com.springprojects.virtualbookstore.repo.BookRepo;
+import com.springprojects.virtualbookstore.request.CreateBookRequest;
+
+@Service
+public class BookServiceImplementation implements BookService {
+	private BookRepo bookRepo;
+	
+	public BookServiceImplementation(BookRepo bookRepo) {
+		super();
+		this.bookRepo = bookRepo;
+	}
+
+	@Override
+	public Book createBook(CreateBookRequest req) {
+		Book book = new Book();
+		book.setTitle(req.getTitle());
+		book.setQuantity(req.getQuantity());
+		book.setPrice(req.getPrice());
+		book.setImageUrl(req.getImageUrl());
+		book.setDiscountPercent(req.getDiscountPercent());
+		book.setDiscountedPrice(req.getDiscountedPrice());
+		book.setDescription(req.getDescription());
+		book.setCreatedAt(LocalDateTime.now());
+		Book savedBook = bookRepo.save(book);
+		
+		return savedBook;
+	}
+
+	@Override
+	public String deleteBook(Long bookId) throws BookException {
+		Book book = findBookById(bookId);
+		bookRepo.dele
+		return null;
+	}
+
+	@Override
+	public Book updateBook(Long bookId, Book req) throws BookException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Book findBookById(Long bookId) throws BookException {
+		Optional<Book> opt = bookRepo.findById(bookId);
+		
+		if(opt.isPresent()) return opt.get();
+		throw new BookException("Book is not found with id - "+bookId);
+	}
+
+	@Override
+	public List<Book> getAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

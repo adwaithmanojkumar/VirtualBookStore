@@ -1,0 +1,5 @@
+package com.springprojects.virtualbookstore.service;
+
+public interface ReviewService {
+	
+}

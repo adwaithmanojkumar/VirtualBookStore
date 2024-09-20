@@ -1,0 +1,8 @@
+package com.example.ecommerce_website.config;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class JwtProvider {
+	
+}

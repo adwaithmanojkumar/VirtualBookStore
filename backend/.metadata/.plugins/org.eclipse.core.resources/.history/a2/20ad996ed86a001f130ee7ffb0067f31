@@ -1,0 +1,6 @@
+package com.springprojects.virtualbookstore.service;
+
+
+public interface BookService {
+	public Book createProduct(CreateProductRequest req);
+}

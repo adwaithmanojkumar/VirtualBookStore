@@ -1,0 +1,8 @@
+package com.example.myfirstwebapp.hello;
+
+public class SayHelloController {
+	
+	public String sayHello() {
+		return "Hello Welcome Guys!";
+	}
+}

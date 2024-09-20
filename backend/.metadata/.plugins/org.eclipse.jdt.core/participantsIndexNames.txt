@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+D:\CSE\full stack java\BookStore\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2156563519.index
+\Virtualbookstore\src\main\resources
+D:\CSE\full stack java\BookStore\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3076917706.index
+\myfirstwebapp\src\main\resources

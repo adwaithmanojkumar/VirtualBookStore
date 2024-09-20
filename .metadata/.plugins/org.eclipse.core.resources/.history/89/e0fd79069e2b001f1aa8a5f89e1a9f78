@@ -1,0 +1,2 @@
+insert into book(id,book_Name,author_Name,published_Date)
+values(102,'Playing It In My Way','Sachin Tendulkar',CURRENT_DATE());

@@ -1,0 +1,12 @@
+package com.adwaith.springsecurity.resources;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class CsrfTokenResource {
+	
+	@GetMapping("/users/todos")
+	public String retrieveCsrfToken() {
+		return "";
+	}
+	
+}

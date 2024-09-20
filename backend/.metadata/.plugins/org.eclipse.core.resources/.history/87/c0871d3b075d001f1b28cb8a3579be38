@@ -1,0 +1,56 @@
+package com.example.ecommerce_website.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ecommerce_website.exception.CartItemException;
+import com.example.ecommerce_website.exception.UserException;
+import com.example.ecommerce_website.model.Cart;
+import com.example.ecommerce_website.model.CartItem;
+import com.example.ecommerce_website.model.Product;
+import com.example.ecommerce_website.repo.CartItemRepo;
+import com.example.ecommerce_website.repo.CartRepo;
+
+@Service
+public class CartItemServiceImplementation implements CartItemService{
+	private CartRepo cartRepo;
+	private CartItemRepo cartItemRepo;
+	private UserService userService;
+	
+	public CartItemServiceImplementation(CartRepo cartRepo, CartItemRepo cartItemRepo, UserService userService) {
+		super();
+		this.cartRepo = cartRepo;
+		this.cartItemRepo = cartItemRepo;
+		this.userService = userService;
+	}
+
+	@Override
+	public CartItem createCartItem(CartItem cartItem) {
+		return null;
+	}
+
+	@Override
+	public CartItem updateCartItem(Long userId, Long cartItemId, CartItem cartItem)
+			throws CartItemException, UserException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CartItem isCartItemExist(Product product, Cart cart, String size, Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeCartItem(Long userId, Long cartItemId) throws CartItemException, UserException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public CartItem findCartItemById(Long cartItemId) throws CartItemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

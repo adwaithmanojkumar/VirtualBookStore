@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.buildship.ui.wizard.project.creation">
+		<item key="use_default_location" value="false"/>
+		<item key="project_location" value="D:\adwaith\java projects\spring-security\LearnSpringSecurity"/>
+		<item key="custom_location" value="D:\adwaith\java projects\spring-security"/>
+		<item key="apply_working_sets" value="false"/>
+		<list key="working_sets">
+		</list>
+	</section>
+	<section name="org.eclipse.buildship.ui.wizard.project.import">
+		<item key="project_location" value="D:\adwaith\java projects\learn-spring-aop"/>
+		<item key="apply_working_sets" value="false"/>
+		<list key="working_sets">
+		</list>
+	</section>
+</section>

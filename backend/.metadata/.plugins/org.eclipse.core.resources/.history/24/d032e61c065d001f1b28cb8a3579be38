@@ -1,0 +1,13 @@
+package com.example.ecommerce_website.service;
+
+import com.example.ecommerce_website.exception.CartItemException;
+import com.example.ecommerce_website.exception.UserException;
+import com.example.ecommerce_website.model.CartItem;
+
+public interface CartItemService {
+	public CartItem createCartItem(CartItem cartItem);
+	
+	public CartItem updateCartItem(Long userId,Long id,CartItem cartItem) throws CartItemException,UserException;
+	
+	public CartItem isCartItemExist(Product product,Cart cart,String size,Long userId); 
+}
