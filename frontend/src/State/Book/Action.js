@@ -11,9 +11,8 @@ export const findBooks = () => async (dispatch) => {
     }
 }
 
-export const findBooksById = (reqData) => async (dispatch) => {
+export const findBooksById = (bookId) => async (dispatch) => {
     dispatch({ type: FIND_BOOKS_BY_ID_REQUEST })
-    const {bookId} = reqData
     try {
         const {data} = await api.get(`/books-details/${bookId}`)
         dispatch({type:FIND_BOOKS_BY_ID_SUCCESS,payload:data})
@@ -22,7 +21,7 @@ export const findBooksById = (reqData) => async (dispatch) => {
     }
 }
 
-export const addBook = (bookData) => async(dispatch) => {
+export const addBook = (bookData) => async (dispatch) => {
     dispatch({ type: ADD_BOOK_REQUEST })
     console.log("bookData ",bookData)
     try {

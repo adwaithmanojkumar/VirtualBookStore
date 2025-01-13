@@ -1,11 +1,39 @@
 import { Button, Grid, LinearProgress, Rating } from '@mui/material'
-import React from 'react'
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import BookReviewCard from './BookReviewCard';
+import { findBooksById } from '../../State/Book/Action';
+import { addItemsToCart } from '../../State/Cart/Action';
 
 const BookDetails = () => {
     const location = useLocation()
     const { product } = location.state || {};
+    const params = useParams()
+    const dispatch = useDispatch()
+    const {books} = useSelector(store=>store.book)
+    const navigate = useNavigate()
+    const [quantity, setQuantity] = useState(1)
+
+    console.log("books--- ", books)
+    console.log("params--- ", params.bookId)
+
+    const handleQuantityChange = (event) => {
+        setQuantity(event.target.value); // Update the quantity state
+    };
+
+    const handleAddToCart = () => {
+        const data = { bookId: Number(params.bookId), quantity: parseInt(quantity) }; // Convert quantity to number
+        console.log('Adding to cart:', data);
+        dispatch(addItemsToCart(data)); // Dispatch action with bookId and quantity
+        navigate("/cart"); // Navigate to cart after adding item
+    };
+
+    useEffect(() => {
+        if (books[params.bookId].id) {
+            dispatch(findBooksById(params.bookId));
+        }
+    }, [params.bookId]);
 
     if (!product) {
         return <p>No product data available.</p>;
@@ -47,7 +75,7 @@ const BookDetails = () => {
                     <div className='border-2 border-gray-300 h-auto m-14 space-y-1 text-lg shadow-xl shadow-slate-300 rounded-md'>
                         <div className='flex flex-row space-x-2 p-3'>
                             <h5>Quantity:</h5>
-                            <select name="quantity" className='border border-gray-700'>
+                            {/* <select name="quantity" className='border border-gray-700'>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -58,10 +86,19 @@ const BookDetails = () => {
                                 <option>8</option>
                                 <option>9</option>
                                 <option>10</option>
+                            </select> */}
+                            <select
+                                name="quantity"
+                                value={quantity}
+                                onChange={handleQuantityChange} // Handle quantity change
+                                className='border border-gray-700'>
+                                {[...Array(10).keys()].map(i => (
+                                    <option key={i + 1} value={i + 1}>{i + 1}</option>
+                                ))}
                             </select>
                         </div>
                         <div className='pb-2 m-2'>
-                            <Button variant='contained' sx={{
+                            <Button onClick={handleAddToCart} variant='contained' sx={{
                                 borderRadius: '2rem', bgcolor: "#15ad4a", '&:hover': {
                                     bgcolor: "#15ad4a"
                                 }
@@ -90,46 +127,46 @@ const BookDetails = () => {
                             <h3 className='font-semibold opacity-70 mb-2'>76757 Ratings</h3>
                         </div>
                         <Grid container gap={1}>
-                        <Grid container alignItems={'center'} gap={2}>
-                            <Grid item xs={2}>
-                                <p>Excellent</p>
+                            <Grid container alignItems={'center'} gap={2}>
+                                <Grid item xs={2}>
+                                    <p>Excellent</p>
+                                </Grid>
+                                <Grid item xs={7}>
+                                    <LinearProgress value={40} color='success' variant='determinate' sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} />
+                                </Grid>
                             </Grid>
-                            <Grid item xs={7}>
-                                <LinearProgress value={40} color='success' variant='determinate' sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}}/>
+                            <Grid container alignItems={'center'} gap={2}>
+                                <Grid item xs={2}>
+                                    <p>Very Good</p>
+                                </Grid>
+                                <Grid item xs={7}>
+                                    <LinearProgress value={60} color='warning' variant='determinate' sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} />
+                                </Grid>
                             </Grid>
-                        </Grid>
-                        <Grid container alignItems={'center'} gap={2}>
-                            <Grid item xs={2}>
-                                <p>Very Good</p>
+                            <Grid container alignItems={'center'} gap={2}>
+                                <Grid item xs={2}>
+                                    <p>Good</p>
+                                </Grid>
+                                <Grid item xs={7}>
+                                    <LinearProgress value={45} color='secondary' variant='determinate' sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} />
+                                </Grid>
                             </Grid>
-                            <Grid item xs={7}>
-                                <LinearProgress value={60} color='warning' variant='determinate' sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}}/>
+                            <Grid container alignItems={'center'} gap={2}>
+                                <Grid item xs={2}>
+                                    <p>Average</p>
+                                </Grid>
+                                <Grid item xs={7}>
+                                    <LinearProgress value={35} color='primary' variant='determinate' sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} />
+                                </Grid>
                             </Grid>
-                        </Grid>
-                        <Grid container alignItems={'center'} gap={2}>
-                            <Grid item xs={2}>
-                                <p>Good</p>
+                            <Grid container alignItems={'center'} gap={2}>
+                                <Grid item xs={2}>
+                                    <p>Poor</p>
+                                </Grid>
+                                <Grid item xs={7}>
+                                    <LinearProgress value={25} color='error' variant='determinate' sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} />
+                                </Grid>
                             </Grid>
-                            <Grid item xs={7}>
-                                <LinearProgress value={45} color='secondary' variant='determinate' sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}}/>
-                            </Grid>
-                        </Grid>
-                        <Grid container alignItems={'center'} gap={2}>
-                            <Grid item xs={2}>
-                                <p>Average</p>
-                            </Grid>
-                            <Grid item xs={7}>
-                                <LinearProgress value={35} color='primary' variant='determinate' sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}}/>
-                            </Grid>
-                        </Grid>
-                        <Grid container alignItems={'center'} gap={2}>
-                            <Grid item xs={2}>
-                                <p>Poor</p>
-                            </Grid>
-                            <Grid item xs={7}>
-                                <LinearProgress value={25} color='error' variant='determinate' sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}}/>
-                            </Grid>
-                        </Grid>
                         </Grid>
                     </Grid>
                 </Grid>

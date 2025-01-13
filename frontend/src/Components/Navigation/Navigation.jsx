@@ -6,12 +6,12 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import AuthModal from '../../Auth/AuthModal';
-import { store } from '../../State/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser, logout } from '../../State/Auth/Action';
+import store from '../../State/store';
 
 const navigation = [
-  { name: 'Adwaith', href: '/', current: true },
+  { name: 'Home', href: '/', current: true },
   { name: 'Books', href: '/books', current: false },
   { name: 'Add', href: '/books/add-book', current: false },
 ]
@@ -35,7 +35,7 @@ export default function Navigation() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleCloseUserMenu = (event) => {
+  const handleCloseUserMenu = () => {
     setAnchorEl(null);
   };
 
@@ -53,6 +53,7 @@ export default function Navigation() {
 
   const handleClose = () => {
     setOpenAuthModal(false);
+    navigate("/")
   }
 
   useEffect(() => {
@@ -119,13 +120,13 @@ export default function Navigation() {
 
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {/* Profile dropdown */}
-            {true ? (
+            {auth.user ? (
               <Menu as="div" className="relative ml-3">
                 <div>
                   <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">Open user menu</span>
-                    <Avatar onClick={() => handleUserClick()} sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
+                    <Avatar onClick={(event) => handleUserClick(event)} sx={{ bgcolor: deepOrange[500] }}>{auth.user.firstName[0].toUpperCase()}</Avatar>
                   </MenuButton>
                 </div>
                 <MenuItems

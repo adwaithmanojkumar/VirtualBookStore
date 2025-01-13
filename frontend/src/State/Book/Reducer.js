@@ -1,8 +1,10 @@
 import { book_details } from "../../Data/book_details"
 import { ADD_BOOK_FAILURE, ADD_BOOK_REQUEST, ADD_BOOK_SUCCESS, FIND_BOOKS_BY_ID_FAILURE, FIND_BOOKS_BY_ID_REQUEST, FIND_BOOKS_BY_ID_SUCCESS, FIND_BOOKS_FAILURE, FIND_BOOKS_REQUEST, FIND_BOOKS_SUCCESS } from "./ActionType"
 
+const books = book_details;
+
 const initialState = {
-    books:book_details,
+    books:books,
     book:null,
     loading:false,
     error:null
@@ -17,7 +19,7 @@ export const bookReducer = (state=initialState,action) => {
 
         case FIND_BOOKS_SUCCESS:
             case ADD_BOOK_SUCCESS:
-                return {...state,loading:false,books:action.payload,error:null}
+                return {...state,loading:false,books:[...state.books, action.payload],error:null}
 
         case FIND_BOOKS_BY_ID_SUCCESS:
             return {...state,loading:false,book:action.payload,error:null}

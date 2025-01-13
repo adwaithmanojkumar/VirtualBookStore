@@ -1,0 +1,3 @@
+Inside bookDetails.jsx,
+
+We are not able to fetch individual book info from store. Actions are not working for bookreducer.

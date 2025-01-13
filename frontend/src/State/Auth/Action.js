@@ -11,6 +11,7 @@ export const register = (userData) => async (dispatch) => {
 
     try {
         const response = await axios.post(`${API_BASE_URL}/auth/signup`,userData)
+        console.log("response ",response.data)
         const user=response.data
         if(user.jwt) {
             localStorage.setItem("jwt",user.jwt)
@@ -64,7 +65,7 @@ export const getUser = (jwt) => async (dispatch) => {
 
 const logoutUser = () => ({type:LOGOUT,payload:null})
 
-export const logout = () => (dispatch) => {
+export const logout = () => async (dispatch) => {
     dispatch(logoutUser())
     localStorage.clear()
 }

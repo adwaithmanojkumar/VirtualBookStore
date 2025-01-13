@@ -7,16 +7,24 @@ const AddForm = () => {
     const dispatch = useDispatch()
 
     const [formData, setFormData] = useState({
-        bookTitle: '',
-        authorName: '',
-        price: '',
-        discountedPrice: '',
-        discountedPercent: ''
+        title: "",
+        authorName: "",
+        price: "",
+        discountedPrice: "",
+        description: "",
+        rating: 0,
+        reviews: 0,
+        discountPercent: 0,
+        imageUrl: "",
     });
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    }
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
 
     const handleSubmit = (e) => {
         console.log(formData)
@@ -25,11 +33,15 @@ const AddForm = () => {
         dispatch(addBook(formData));
         // Clear form
         setFormData({
-            bookTitle: '',
-            authorName: '',
-            price: '',
-            discountedPrice: '',
-            discountedPercent: ''
+            title: "",
+            authorName: "",
+            price: "",
+            discountedPrice: "",
+            description: "",
+            rating: 0,
+            reviews: 0,
+            discountPercent: 0,
+            imageUrl: "",
         });
     }
 
@@ -41,11 +53,11 @@ const AddForm = () => {
                     <p className='font-bold text-gray-600'>Enter Book Title: </p>
                     <TextField
                         required
-                        id='bookTitle'
+                        id='title'
                         label='Book Title'
-                        name='bookTitle'
+                        name='title'
                         autoComplete='given'
-                        value={formData.bookTitle}
+                        value={formData.title}
                         onChange={handleChange}
                         fullWidth
                     />
@@ -85,29 +97,76 @@ const AddForm = () => {
                         onChange={handleChange}
                         type='number'
                     />
-                    <p className='font-bold text-gray-600'>Enter DiscountedPercent: </p>
+                    <p className='font-bold text-gray-600'>Enter DiscountPercent: </p>
                     <TextField
                         required
-                        id='discountedPercent'
-                        label='Discounted Percent (%)'
-                        name='discountedPercent'
+                        id='discountPercent'
+                        label='Discount Percent (%)'
+                        name='discountPercent'
                         type='number'
-                        value={formData.discountedPercent}
+                        value={formData.discountPercent}
                         onChange={handleChange}
                     />
                     <p>%</p>
                 </div>
-                <div className='flex justify-center align-middle h-10'>
-                    <Button variant='contained' type='submit' sx={{
-                        width: '3rem', bgcolor: "#bc26de", "&:hover": {
-                            bgcolor: "#bc26de"
-                        }
-                    }}>
-                        SUBMIT
-                    </Button>
+                <div className='flex flex-row items-center space-x-6'>
+                    <p className='font-bold text-gray-600'>Enter Description: </p>
+                    <TextField
+                        required
+                        type='text'
+                        id='description'
+                        label='Description'
+                        name='description'
+                        value={formData.description}
+                        onChange={handleChange}
+                        fullWidth
+                    />
                 </div>
+                <div className='flex flex-row items-center space-x-4'>
+                    <p className='font-bold text-gray-600 mr-10 pr-8'>Enter Rating: </p>
+                    <TextField
+                        required
+                        type='number'
+                        id='rating'
+                        label='Rating'
+                        name='rating'
+                        value={formData.rating}
+                        onChange={handleChange}
+                    />
+                    <p className='font-bold text-gray-600'>Enter Reviews: </p>
+                    <TextField
+                        required
+                        type='number'
+                        id='reviews'
+                        label='Reviews'
+                        name='reviews'
+                        value={formData.reviews}
+                        onChange={handleChange}
+                    />
+                    <p className='font-bold text-gray-600'>Enter ImageURL: </p>
+                    <TextField
+                        required
+                        type='text'
+                        id='imageUrl'
+                        label='Image Url'
+                        name='imageUrl'
+                        autoComplete='given'
+                        value={formData.imageUrl}
+                        onChange={handleChange}
+                        fullWidth
+                    />
+                </div>
+            <div className='flex justify-center align-middle h-10'>
+                <Button variant='contained' type='submit' sx={{
+                    width: '3rem', bgcolor: "#bc26de", "&:hover": {
+                        bgcolor: "#bc26de"
+                    }
+                }}>
+                    SUBMIT
+                </Button>
             </div>
-        </form>
+        </div>
+        </form >
     )
 }
 

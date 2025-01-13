@@ -5,12 +5,25 @@ import Checkbox from '@mui/material/Checkbox';
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import ItemsCart from './ItemsCart';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeCartItem, updateCartItem } from '../../State/Cart/Action';
 
 const Cart = () => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const cartItems = useSelector(state => state.cart.cartItems)
+
     const handleCheckOut = () => {
         navigate(`/checkout?step=2`)
     }
+
+    const handleRemoveCartItem = (bookId) => {
+        dispatch(removeCartItem(bookId));
+    };
+
+    const handleUpdateCartItem = (bookId, quantity) => {
+        dispatch(updateCartItem(bookId, quantity));
+    };
 
     return (
         <div className='flex flex-col m-5 mt-6'>
@@ -24,7 +37,14 @@ const Cart = () => {
                     </div>
                 </Grid>
                 <Grid item xs={4}>
-                {[1,1,1,1].map((item)=><ItemsCart/>)}
+                    {cartItems.map(item => (
+                        <ItemsCart
+                            key={item.bookId}
+                            item={item}
+                            onRemove={handleRemoveCartItem}
+                            onUpdateQuantity={handleUpdateCartItem}
+                        />
+                    ))}
                 </Grid>
                 <Grid item xs={5}>
                     <div className='lg:grid h-[18rem] w-[30rem]'>

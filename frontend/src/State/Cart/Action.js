@@ -1,4 +1,3 @@
-import axios from "axios"
 import { api } from "../../Config/apiConfig"
 import { ADD_ITEM_TO_CART_FAILURE, ADD_ITEM_TO_CART_REQUEST, ADD_ITEM_TO_CART_SUCCESS, GET_CART_FAILURE, GET_CART_REQUEST, GET_CART_SUCCESS, REMOVE_CART_ITEM_FAILURE, REMOVE_CART_ITEM_REQUEST, REMOVE_CART_ITEM_SUCCESS, UPDATE_CART_ITEM_FAILURE, UPDATE_CART_ITEM_REQUEST, UPDATE_CART_ITEM_SUCCESS } from "./ActionType"
 
@@ -17,8 +16,19 @@ export const addItemsToCart = (reqData) => async (dispatch) => {
     dispatch({type:ADD_ITEM_TO_CART_REQUEST})
 
     try {
-        const {data} = await api.put("/cart/add",reqData.data)
+        console.log('Request data:', reqData);
+        // const {data} = await api.post("/cart/add",reqData.bookId)
+        const token = localStorage.getItem("jwt"); // Modify this based on how you store the JWT
+
+        const { data } = await api.post("/cart/add", reqData, {
+            headers: {
+                "Authorization": `Bearer ${token}` // Include JWT in Authorization header
+            }
+        });
+        console.log('Request data:', reqData);
+        console.log('Response data:', data);
         dispatch({type:ADD_ITEM_TO_CART_SUCCESS,payload:data})
+        console.log('add items to cart',reqData)
     } catch (error) {
         dispatch({type:ADD_ITEM_TO_CART_FAILURE,payload:error.message})
     }
